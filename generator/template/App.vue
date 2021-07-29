@@ -4,7 +4,7 @@ replace:
   - !!js/regexp /<template>[^]*?<\/template>/
   - !!js/regexp /\n<script>[^]*?<\/script>\n/
 ---
-<%_ if (addExample) { _%>
+
 <%# REPLACE %>
 <template>
   <ConnectWallte/>
@@ -22,4 +22,3 @@ export default {
 }
 </script>
 <%# END_REPLACE %>
-<%_ } _%>

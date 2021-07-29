@@ -1,6 +1,6 @@
 module.exports = (api, options = {}, rootOptions = {}) => {
   api.render("./template",{...options});
-//   console.log("options",options);
+
   if(options.addExample){
     api.render((files, render) => {
         delete files['src/App.vue']

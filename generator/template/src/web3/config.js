@@ -1,18 +1,18 @@
 import WalletConnectProvider from '@walletconnect/web3-provider';
-<% if (isAddTorus) { %>
+<%_ if (isAddTorus) { _%>
 import Torus from '@toruslabs/torus-embed';
-<% } %> 
-<% if (isAddAuthereum) { %>
+<%_ } _%> 
+<%_ if (isAddAuthereum) { _%>
 import Authereum from 'authereum';
-<% } %> 
+<%_ } _%> 
 
-<% if (isAddBitski) { %>
+<%_ if (isAddBitski) { _%>
 import { Bitski } from 'bitski';
-<% } %> 
+<%_ } _%> 
 
-<% if (isAddFortmatic) { %>
+<%_ if (isAddFortmatic) { _%>
   import Fortmatic from 'fortmatic';
-<% } %> 
+<%_ } _%> 
 // eslint-disable-next-line global-require
 const { USDT_ADDRESS } = process.env.NODE_ENV === 'production'
   ? require('./constants')
@@ -25,25 +25,25 @@ const providerOptions = {
       infuraId: 'xxxxxxxxxx', // TODO infuraId
     },
   },
-  <% if (isAddTorus) { %>
+  <%_ if (isAddTorus) { _%>
   torus: {
     package: Torus,
   },
-  <% } %> 
-  <% if (isAddFortmatic) { %>
+  <%_ } _%> 
+  <%_ if (isAddFortmatic) { _%>
   fortmatic: {
     package: Fortmatic,
     options: {
       key: 'xxxxxxxxxx', // TODO key
     },
   },
-  <% } %> 
-  <% if (isAddAuthereum) { %>
+  <%_ } _%> 
+  <%_ if (isAddAuthereum) { _%>
   authereum: {
     package: Authereum,
   },
-  <% } %>
-  <% if (isAddBitski) { %>
+  <%_ } _%>
+  <%_ if (isAddBitski) { _%>
   bitski: {
     package: Bitski,
     options: {
@@ -51,7 +51,7 @@ const providerOptions = {
       callbackUrl: `${window.location.href}bitski-callback.html`,
     },
   },
-  <% } %>
+  <%_ } _%>
 };
 
 export { USDT_ADDRESS, providerOptions };
