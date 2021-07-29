@@ -20,8 +20,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/ZHUIMEN/vue-cli-plugin-web3modal.git"
   },
-  "homepage": "",
+  "homepage": "https://github.com/ZHUIMEN/vue-cli-plugin-web3modal#readme",
   "license": "ISC"
 }
