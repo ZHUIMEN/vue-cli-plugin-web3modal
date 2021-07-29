@@ -1,5 +1,5 @@
 module.exports = (api, options = {}, rootOptions = {}) => {
-  api.render("./template");
+  api.render("./template",{...options});
 //   console.log("options",options);
   if(options.addExample){
     api.render((files, render) => {
