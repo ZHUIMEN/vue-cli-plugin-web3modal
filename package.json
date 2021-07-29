@@ -1,0 +1,27 @@
+{
+  "name": "vue-cli-plugin-web3modal",
+  "version": "1.0.0",
+  "description": "vue-cli plugin to add web3modal",
+  "main": "index.js",
+  "author": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ethereum",
+    "ethers",
+    "web3",
+    "vuex",
+    "store",
+    "vue",
+    "cli",
+    "plugin",
+    "dapp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "license": "ISC"
+}
