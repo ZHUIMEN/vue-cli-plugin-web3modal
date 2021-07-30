@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import supportedChains from './chains';
 
 export function getChainData(chainId) {

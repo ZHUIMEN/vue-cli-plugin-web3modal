@@ -4,7 +4,7 @@ replace:
   - !!js/regexp /<template>[^]*?<\/template>/
   - !!js/regexp /\n<script>[^]*?<\/script>\n/
 ---
-
+<%_ if (addExample) { _%>
 <%# REPLACE %>
 <template>
   <ConnectWallte/>
@@ -14,7 +14,7 @@ replace:
 
 <%# REPLACE %>
 <script>
-import ConnectWallte from './components/ConnectWallte.vue'
+import ConnectWallte from './components/ConnectWallteExample.vue';
 export default {
     components: {
         ConnectWallte,
@@ -22,3 +22,4 @@ export default {
 }
 </script>
 <%# END_REPLACE %>
+<%_ } _%>

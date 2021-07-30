@@ -1,13 +1,8 @@
 module.exports = (api, options = {}, rootOptions = {}) => {
   api.render("./template",{...options});
-//   console.log("options",options);
   if(options.addExample){
-    api.render((files, render) => {
-        delete files['src/App.vue']
-        delete files['src/components/ConnectWallte.vue']
-      })
+    api.render('./example')
   }
-  
   const dependencies = {}
     options.isAddTorus &&(dependencies['@toruslabs/torus-embed'] = "^1.10.15")
     options.isAddAuthereum &&(dependencies['authereum'] = "^0.1.14")
