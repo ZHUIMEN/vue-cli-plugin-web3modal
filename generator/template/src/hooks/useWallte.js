@@ -11,7 +11,6 @@ const INITIAL_STATE = {
   provider: null,
   userAddress: '',
   connected: false,
-
   chainId: 1,
   networkId: 1,
 };
@@ -21,6 +20,7 @@ export default function UseWallet() {
   const walletObj = reactive({ ...INITIAL_STATE });
   const fetching = ref(false);
   const assets = ref(0);
+  //https://github.com/Web3Modal/web3modal#web3modal
   const web3Modal = new Web3Modal({
     theme: 'dark',
     network: getChainData(walletObj.chainId).network,

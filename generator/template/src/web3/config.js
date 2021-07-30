@@ -17,8 +17,9 @@ import { Bitski } from 'bitski';
 const { USDT_ADDRESS } = process.env.NODE_ENV === 'production'
   ? require('./constants')
   : require('./constants.dev');
-
+// 
 const providerOptions = {
+  //https://docs.walletconnect.org/
   walletconnect: {
     package: WalletConnectProvider,
     options: {
@@ -26,11 +27,13 @@ const providerOptions = {
     },
   },
   <%_ if (isAddTorus) { _%>
+    // https://github.com/torusresearch/torus-embed#readme
   torus: {
     package: Torus,
   },
   <%_ } _%> 
   <%_ if (isAddFortmatic) { _%>
+    // https://docs.fortmatic.com/
   fortmatic: {
     package: Fortmatic,
     options: {
@@ -39,11 +42,13 @@ const providerOptions = {
   },
   <%_ } _%> 
   <%_ if (isAddAuthereum) { _%>
+    // https://docs.authereum.com/integration
   authereum: {
     package: Authereum,
   },
   <%_ } _%>
   <%_ if (isAddBitski) { _%>
+    //https://docs.bitski.com/
   bitski: {
     package: Bitski,
     options: {
