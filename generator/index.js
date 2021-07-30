@@ -1,6 +1,6 @@
 module.exports = (api, options = {}, rootOptions = {}) => {
   api.render("./template",{...options});
-  if(!options.addExample){
+  if(options.addExample){
     api.render('./example')
   }
   const dependencies = {}

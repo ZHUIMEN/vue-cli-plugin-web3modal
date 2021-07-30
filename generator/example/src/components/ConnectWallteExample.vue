@@ -3,7 +3,7 @@
     <button @click="handleWalletConnect">WalletConnect</button>
     <button @click="resetApp">resetApp</button>
     <button @click="getAccountAssets">getBalance</button>
-
+    <button @click="approve">approveUSDTContract</button>
     <p>
       Address:
       {{ userAddress }}
@@ -14,9 +14,11 @@
   </div>
 </template>
 <script setup>
-import useWallet from "../hooks/useWallte";
-import {USDT_API} from '../web3/abis'
-import {USDT_ADDRESS} from '../web3/config'
+import { computed } from 'vue';
+import { utils } from 'web3';
+import useWallet from '../hooks/useWallte';
+import { USDT_API } from '../web3/abis';
+import { USDT_ADDRESS } from '../web3/config';
 
 const {
   onConnect,
@@ -33,18 +35,18 @@ const {
 const handleWalletConnect = async () => {
   await onConnect();
   if (connected) {
-    console.log("afterConnectdWallet", connected);
+    console.log('afterConnectdWallet', connected);
   }
 };
- const contract = computed(
-    () => new web3.value.eth.Contract(USDT_API, USDT_ADDRESS),
-  );
-const balanceOf =  ()=>{
-    return contract.value.methods
-      .balanceOf(userAddress.value)
-      .call()
-      .then((res) => res);
-  }
-  // .....
+const contract = computed(
+  () => new web3.value.eth.Contract(USDT_API, USDT_ADDRESS),
+);
+function approve() {
+  return contract.value.methods
+    .approve(USDT_ADDRESS, utils.toHex(utils.toWei('1000000000000000000000000000', 'gwei')))
+    .send({ from: userAddress.value });
+}
+
+// .....
 
 </script>

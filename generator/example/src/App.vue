@@ -14,7 +14,7 @@ replace:
 
 <%# REPLACE %>
 <script>
-import ConnectWallte from './components/ConnectWallte.vue'
+import ConnectWallte from './components/ConnectWallteExample.vue';
 export default {
     components: {
         ConnectWallte,

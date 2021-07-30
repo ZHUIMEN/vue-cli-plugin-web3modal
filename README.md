@@ -79,11 +79,10 @@ Here will provide web3、userAddress、chainId、networkId、resetApp、assets�
 Please use ConnectWallteExample.vue 
 ``` js
 <script setup>
-import useWallet from "../hooks/useWallte";
 const {
   onConnect,
   connected,
-  web3
+  web3,
   userAddress,
   chainId,
   networkId,
@@ -91,22 +90,22 @@ const {
   assets,
   getAccountAssets,
 } = useWallet();
+
 const handleWalletConnect = async () => {
   await onConnect();
   if (connected) {
-    console.log("afterConnectdWallet", connected);
+    console.log('afterConnectdWallet', connected);
   }
 };
- const contract = computed(
-    () => new web3.value.eth.Contract(xxxABI, XXXAddress),
-  );
-const balanceOf =  {
-    return contract.value.methods
-      .balanceOf(userAddress.value)
-      .call()
-      .then((res) => res);
-  }
-  // .....
+const contract = computed(
+  () => new web3.value.eth.Contract(USDT_API, USDT_ADDRESS),
+);
+function approve() {
+  return contract.value.methods
+    .approve(USDT_ADDRESS, utils.toHex(utils.toWei('1000000000000000000000000000', 'gwei')))
+    .send({ from: userAddress.value });
+}
 
+// .....
 </script>
 ```
