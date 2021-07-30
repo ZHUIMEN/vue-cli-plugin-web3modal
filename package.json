@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-web3modal",
-  "version": "1.0.5-beta",
+  "version": "1.1.0",
   "description": "vue-cli plugin to add web3modal",
   "main": "index.js",
   "author": "cuijiajun <1453475013@qq.com>",

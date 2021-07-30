@@ -3,9 +3,13 @@ vue3-cli-plugin A single Web3 / Ethereum provider solution for all Wallets
 
 ## Introduction
 vue-cli-plugin-web3modal It is based on [web3modal](https://web3modal.com/) for vuejs  help developers add support for multiple providers in their apps with a simple customizable configuration.
-
+![preview](./demo.png)
 
 ## Usage
+``` bash
+vue add vue-cli-plugin-web3modal 
+```
+ OR
 
 1. Install vue-cli-plugin-web3modal NPM package
 
