@@ -1,6 +1,6 @@
 # vue-cli-plugin-web3modal
 vue3-cli-plugin A single Web3 / Ethereum provider solution for all Wallets
-##example
+## example
 ``` bash
  cd example && npm install && npm serve
  ```
